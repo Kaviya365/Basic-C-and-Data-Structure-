@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int r, c, i, j;
+
+    printf("Enter the number of rows and columns of the matrix: ");
+    scanf("%d %d", &r, &c);
+
+    int matrix1[r][c], matrix2[r][c], result[r][c];
+
+    // Input for first matrix
+    printf("Enter elements of the first matrix:\n");
+    for (i = 0; i < r; ++i) {
+        for (j = 0; j < c; ++j) {
+            scanf("%d", &matrix1[i][j]);
+        }
+    }
+
+    // Input for second matrix
+    printf("Enter elements of the second matrix:\n");
+    for (i = 0; i < r; ++i) {
+        for (j = 0; j < c; ++j) {
+            scanf("%d", &matrix2[i][j]);
+        }
+    }
+
+    // Matrix addition
+    for (i = 0; i < r; ++i) {
+        for (j = 0; j < c; ++j) {
+            result[i][j] = matrix1[i][j] + matrix2[i][j];
+        }
+    }
+
+    // Display the result
+    printf("Resultant matrix after addition:\n");
+    for (i = 0; i < r; ++i) {
+        for (j = 0; j < c; ++j) {
+            printf("%d ", result[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
